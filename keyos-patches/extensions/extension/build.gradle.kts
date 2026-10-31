@@ -197,7 +197,7 @@ val generateSettingsText = tasks.register("generateSettingsText") {
         )
         javaOutput.parentFile.mkdirs()
         javaOutput.writeText(buildString {
-            appendLine("package com.key.board.extension.settings;")
+            appendLine("package com.key.board.keyos.extension.settings;")
             appendLine()
             appendLine("import java.util.HashMap;")
             appendLine("import java.util.Map;")
