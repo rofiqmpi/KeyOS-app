@@ -65,7 +65,7 @@ val generatedSettingsTextJavaDir = layout.buildDirectory.dir(
 )
 
 android {
-    namespace = "com.key.board.extension"
+    namespace = "com.key.board.keyos.extension"
 
     buildFeatures {
         buildConfig = true
@@ -202,7 +202,7 @@ val generateSettingsText = tasks.register("generateSettingsText") {
             appendLine("import java.util.HashMap;")
             appendLine("import java.util.Map;")
             appendLine()
-            appendLine("import com.key.board.extension.R;")
+            appendLine("import com.key.board.keyos.extension.R;")
             appendLine()
             appendLine("final class GboardSettingsTextCatalog {")
             appendLine("    private static final Map<String, Map<Integer, String>> CATALOGS = createCatalogs();")

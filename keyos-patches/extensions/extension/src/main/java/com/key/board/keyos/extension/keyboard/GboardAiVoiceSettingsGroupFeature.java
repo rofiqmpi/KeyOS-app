@@ -12,7 +12,7 @@ import android.content.Context;
 import java.util.Arrays;
 import java.util.List;
 
-import com.key.board.extension.R;
+import com.key.board.keyos.extension.R;
 import com.key.board.keyos.extension.advancedvoice.GboardAdvancedVoiceSettingsFeature;
 import com.key.board.keyos.extension.settings.GboardFeatureGroup;
 import com.key.board.keyos.extension.settings.GboardPatchesSettingsContract;

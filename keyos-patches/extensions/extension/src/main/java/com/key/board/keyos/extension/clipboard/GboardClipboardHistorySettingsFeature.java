@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.key.board.extension.R;
+import com.key.board.keyos.extension.R;
 import com.key.board.keyos.extension.settings.GboardPatchesSettingsContract;
 import com.key.board.keyos.extension.settings.GboardSettingsText;
 

@@ -104,8 +104,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.RejectedExecutionException;
 
-import com.key.board.extension.R;
-import com.key.board.extension.BuildConfig;
+import com.key.board.keyos.extension.R;
+import com.key.board.keyos.extension.BuildConfig;
 import com.key.board.keyos.extension.settings.keyboardpreview.GboardKeyboardPreviewController;
 import com.key.board.keyos.extension.updater.KeyOSUpdateFeature;
 import com.key.board.keyos.extension.updater.KeyOSUpdateManager;
@@ -114,7 +114,7 @@ public final class GboardPatchesSettingsActivity extends Activity
         implements GboardPatchesSettingsContract.Host {
     private static final String TAG = "GboardPatches";
     public static final String EXTRA_NAVIGATION_PATH =
-            "com.key.board.extension.extra.PATCHES_NAVIGATION_PATH";
+            "com.key.board.keyos.extension.extra.PATCHES_NAVIGATION_PATH";
     private static final String ENTER_PREF_HEADER_EXTRA = "ENTER_PREF_HEADER";
     private static final String GBOARD_SETTINGS_ACTIVITY_CLASS =
             "com.google.android.apps.inputmethod.latin.preference.SettingsActivity";

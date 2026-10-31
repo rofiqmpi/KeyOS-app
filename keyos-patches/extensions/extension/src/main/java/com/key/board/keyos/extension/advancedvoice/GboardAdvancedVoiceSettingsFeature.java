@@ -19,7 +19,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
-import com.key.board.extension.R;
+import com.key.board.keyos.extension.R;
 import com.key.board.keyos.extension.settings.GboardPatchesSettingsContract;
 import com.key.board.keyos.extension.settings.GboardPatchesSettings;
 import com.key.board.keyos.extension.settings.GboardPatchesFeatureAvailability;

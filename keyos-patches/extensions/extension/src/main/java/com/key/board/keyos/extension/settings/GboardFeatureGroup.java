@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.key.board.extension.R;
+import com.key.board.keyos.extension.R;
 
 public final class GboardFeatureGroup implements GboardPatchesSettingsContract.Feature {
     private static final String TAG = "GboardPatches";
