@@ -1,4 +1,4 @@
-package com.key.board.keyos.extension.settings;
+package com.key.board.extension.settings;
 
 import org.junit.Assert;
 import org.junit.Test;

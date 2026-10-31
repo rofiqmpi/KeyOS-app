@@ -5,7 +5,7 @@
  * Repository: https://github.com/KeyOS/KeyOS
  * Licensed under the GNU General Public License v3.0 (GPLv3)
  */
-package com.key.board.keyos.extension.rambler;
+package com.key.board.extension.rambler;
 
 import android.util.Log;
 

@@ -1,4 +1,4 @@
-package com.key.board.keyos.extension.writingtools;
+package com.key.board.extension.writingtools;
 
 import java.util.ArrayList;
 import java.util.Arrays;

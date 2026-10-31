@@ -1,11 +1,11 @@
-package com.key.board.keyos.extension.advancedvoice;
+package com.key.board.extension.advancedvoice;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
 import java.util.Map;
 
-import com.key.board.keyos.extension.settings.GboardPatchesSettings;
+import com.key.board.extension.settings.GboardPatchesSettings;
 
 public final class GboardAdvancedVoiceSettings {
     public static final String PREF_KEY_ENABLED =

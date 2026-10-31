@@ -1,11 +1,11 @@
-package com.key.board.keyos.extension.writingtools;
+package com.key.board.extension.writingtools;
 
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.SharedPreferences;
 
-import com.key.board.keyos.extension.settings.GboardEmojiSettings;
-import com.key.board.keyos.extension.settings.GboardRoundedKeysSettings;
+import com.key.board.extension.settings.GboardEmojiSettings;
+import com.key.board.extension.settings.GboardRoundedKeysSettings;
 
 import org.junit.After;
 import org.junit.Assert;

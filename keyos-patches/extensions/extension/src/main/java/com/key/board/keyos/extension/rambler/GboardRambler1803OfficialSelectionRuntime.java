@@ -1,4 +1,4 @@
-package com.key.board.keyos.extension.rambler;
+package com.key.board.extension.rambler;
 
 import android.content.Context;
 import android.content.SharedPreferences;

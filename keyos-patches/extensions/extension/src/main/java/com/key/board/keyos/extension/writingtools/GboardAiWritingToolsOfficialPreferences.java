@@ -1,4 +1,4 @@
-package com.key.board.keyos.extension.writingtools;
+package com.key.board.extension.writingtools;
 
 public final class GboardAiWritingToolsOfficialPreferences {
     public static final int PROOFREAD_PREF_KEY = 0x7f1409e7;

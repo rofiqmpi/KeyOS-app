@@ -1,4 +1,4 @@
-package com.key.board.keyos.extension.advancedvoice;
+package com.key.board.extension.advancedvoice;
 
 import android.content.Context;
 import android.util.Log;
@@ -16,7 +16,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import com.key.board.keyos.extension.rambler.GboardRambler1803StockPolicy;
+import com.key.board.extension.rambler.GboardRambler1803StockPolicy;
 
 /**
  * KeyOS runtime engine for Google Assistant / Gboard 18.0.3 Advanced Voice Typing.

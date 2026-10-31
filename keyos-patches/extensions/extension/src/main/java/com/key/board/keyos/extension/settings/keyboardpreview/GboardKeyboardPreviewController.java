@@ -1,4 +1,4 @@
-package com.key.board.keyos.extension.settings.keyboardpreview;
+package com.key.board.extension.settings.keyboardpreview;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -37,8 +37,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.function.Supplier;
 
-import com.key.board.keyos.extension.R;
-import com.key.board.keyos.extension.settings.GboardSettingsText;
+import com.key.board.extension.R;
+import com.key.board.extension.settings.GboardSettingsText;
 
 /** Shared Patches-shell affordance for opening an editor that immediately shows Gboard. */
 public final class GboardKeyboardPreviewController {

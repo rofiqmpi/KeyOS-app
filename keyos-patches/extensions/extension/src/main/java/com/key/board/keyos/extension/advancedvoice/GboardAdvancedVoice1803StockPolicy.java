@@ -1,4 +1,4 @@
-package com.key.board.keyos.extension.advancedvoice;
+package com.key.board.extension.advancedvoice;
 
 import java.util.Arrays;
 import java.util.Collections;

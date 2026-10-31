@@ -5,7 +5,7 @@
  * Repository: https://github.com/KeyOS/PixelBoard
  * Licensed under the GNU General Public License v3.0 (GPLv3)
  */
-package com.key.board.keyos.extension.updater;
+package com.key.board.extension.updater;
 
 import org.junit.Assert;
 import org.junit.Test;

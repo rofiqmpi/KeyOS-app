@@ -1,4 +1,4 @@
-package com.key.board.keyos.extension.clipboard;
+package com.key.board.extension.clipboard;
 
 import android.content.ClipboardManager;
 import android.content.Context;

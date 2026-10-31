@@ -1,4 +1,4 @@
-package com.key.board.keyos.extension.advancedvoice;
+package com.key.board.extension.advancedvoice;
 
 import android.app.Application;
 import android.content.Context;
@@ -8,7 +8,7 @@ import android.util.Log;
 import java.lang.reflect.Method;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import com.key.board.keyos.extension.settings.GboardPatchesSettings;
+import com.key.board.extension.settings.GboardPatchesSettings;
 
 public final class GboardAdvancedVoice1803RuntimeSettings {
     private static final String TAG = "GboardPatches";

@@ -1,4 +1,4 @@
-package com.key.board.keyos.extension.settings;
+package com.key.board.extension.settings;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -6,7 +6,7 @@ import org.junit.Test;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
-import com.key.board.keyos.extension.R;
+import com.key.board.extension.R;
 
 public final class GboardSettingsTextTest {
     @Test

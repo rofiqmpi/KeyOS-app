@@ -5,19 +5,19 @@
  * Repository: https://github.com/KeyOS/KeyOS
  * Licensed under the GNU General Public License v3.0 (GPLv3)
  */
-package com.key.board.keyos.extension.keyboard;
+package com.key.board.extension.keyboard;
 
 import android.content.Context;
 
 import java.util.Arrays;
 import java.util.List;
 
-import com.key.board.keyos.extension.R;
-import com.key.board.keyos.extension.advancedvoice.GboardAdvancedVoiceSettingsFeature;
-import com.key.board.keyos.extension.settings.GboardFeatureGroup;
-import com.key.board.keyos.extension.settings.GboardPatchesSettingsContract;
-import com.key.board.keyos.extension.settings.GboardSettingsText;
-import com.key.board.keyos.extension.writingtools.GboardAiWritingToolsSettingsFeature;
+import com.key.board.extension.R;
+import com.key.board.extension.advancedvoice.GboardAdvancedVoiceSettingsFeature;
+import com.key.board.extension.settings.GboardFeatureGroup;
+import com.key.board.extension.settings.GboardPatchesSettingsContract;
+import com.key.board.extension.settings.GboardSettingsText;
+import com.key.board.extension.writingtools.GboardAiWritingToolsSettingsFeature;
 
 public final class GboardAiVoiceSettingsGroupFeature
         implements GboardPatchesSettingsContract.Feature {

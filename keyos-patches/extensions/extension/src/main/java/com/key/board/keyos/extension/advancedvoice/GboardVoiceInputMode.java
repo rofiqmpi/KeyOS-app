@@ -1,4 +1,4 @@
-package com.key.board.keyos.extension.advancedvoice;
+package com.key.board.extension.advancedvoice;
 
 /** Resolves the one effective voice backend selected by the Patches settings. */
 public enum GboardVoiceInputMode {

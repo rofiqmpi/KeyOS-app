@@ -5,7 +5,7 @@
  * Repository: https://github.com/KeyOS/KeyOS
  * Licensed under the GNU General Public License v3.0 (GPLv3)
  */
-package com.key.board.keyos.extension.settings;
+package com.key.board.extension.settings;
 
 import android.content.Context;
 import android.util.Log;
@@ -14,8 +14,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.key.board.keyos.extension.keyboard.GboardAiVoiceSettingsGroupFeature;
-import com.key.board.keyos.extension.updater.KeyOSUpdateFeature;
+import com.key.board.extension.keyboard.GboardAiVoiceSettingsGroupFeature;
+import com.key.board.extension.updater.KeyOSUpdateFeature;
 
 public final class GboardPatchesSettingsFeatureRegistry {
     private static final String TAG = "KeyOS";

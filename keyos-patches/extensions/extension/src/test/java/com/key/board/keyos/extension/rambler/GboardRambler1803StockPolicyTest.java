@@ -1,4 +1,4 @@
-package com.key.board.keyos.extension.rambler;
+package com.key.board.extension.rambler;
 
 import org.junit.After;
 import org.junit.Assert;

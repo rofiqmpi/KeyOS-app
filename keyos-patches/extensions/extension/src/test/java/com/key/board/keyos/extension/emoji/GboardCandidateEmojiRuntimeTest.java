@@ -1,4 +1,4 @@
-package com.key.board.keyos.extension.emoji;
+package com.key.board.extension.emoji;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

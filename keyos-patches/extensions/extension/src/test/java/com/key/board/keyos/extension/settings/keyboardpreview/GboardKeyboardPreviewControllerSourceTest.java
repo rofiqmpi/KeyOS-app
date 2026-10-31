@@ -1,4 +1,4 @@
-package com.key.board.keyos.extension.settings.keyboardpreview;
+package com.key.board.extension.settings.keyboardpreview;
 
 import org.junit.Assert;
 import org.junit.Test;

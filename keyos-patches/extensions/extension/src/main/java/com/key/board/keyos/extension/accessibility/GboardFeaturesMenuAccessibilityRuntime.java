@@ -1,4 +1,4 @@
-package com.key.board.keyos.extension.accessibility;
+package com.key.board.extension.accessibility;
 
 import android.content.Context;
 import android.view.View;
