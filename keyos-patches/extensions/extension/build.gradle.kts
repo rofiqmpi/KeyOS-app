@@ -193,7 +193,7 @@ val generateSettingsText = tasks.register("generateSettingsText") {
         val stringEntries = entries.filter { it.type == "string" }
         val pluralEntries = entries.filter { it.type == "plurals" }
         val javaOutput = generatedSettingsTextJavaDir.get().asFile.resolve(
-            "com/akshaykadam/pixelboard/extension/settings/GboardSettingsTextCatalog.java"
+            "com/key/board/keyos/extension/settings/GboardSettingsTextCatalog.java"
         )
         javaOutput.parentFile.mkdirs()
         javaOutput.writeText(buildString {
@@ -202,7 +202,8 @@ val generateSettingsText = tasks.register("generateSettingsText") {
             appendLine("import java.util.HashMap;")
             appendLine("import java.util.Map;")
             appendLine()
-            appendLine("import com.key.board.keyos.extension.R;")
+            appendLine("import com.key.board.keyos.extension.R;
+import com.key.board.keyos.extension.BuildConfig;")
             appendLine()
             appendLine("final class GboardSettingsTextCatalog {")
             appendLine("    private static final Map<String, Map<Integer, String>> CATALOGS = createCatalogs();")
