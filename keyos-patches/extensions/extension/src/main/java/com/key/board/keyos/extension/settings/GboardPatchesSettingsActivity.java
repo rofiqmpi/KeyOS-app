@@ -5,7 +5,7 @@
  * Repository: https://github.com/KeyOS/KeyOS
  * Licensed under the GNU General Public License v3.0 (GPLv3)
  */
-package com.key.board.extension.settings;
+package com.key.board.keyos.extension.settings;
 
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
@@ -80,8 +80,8 @@ import android.widget.ScrollView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.VideoView;
-import com.key.board.extension.advancedvoice.GboardAdvancedVoiceSettings;
-import com.key.board.extension.writingtools.GboardAiWritingToolsSettings;
+import com.key.board.keyos.extension.advancedvoice.GboardAdvancedVoiceSettings;
+import com.key.board.keyos.extension.writingtools.GboardAiWritingToolsSettings;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -104,11 +104,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.RejectedExecutionException;
 
-import com.key.board.extension.R;
-import com.key.board.extension.BuildConfig;
-import com.key.board.extension.settings.keyboardpreview.GboardKeyboardPreviewController;
-import com.key.board.extension.updater.KeyOSUpdateFeature;
-import com.key.board.extension.updater.KeyOSUpdateManager;
+import com.key.board.keyos.extension.R;
+import com.key.board.keyos.extension.BuildConfig;
+import com.key.board.keyos.extension.settings.keyboardpreview.GboardKeyboardPreviewController;
+import com.key.board.keyos.extension.updater.KeyOSUpdateFeature;
+import com.key.board.keyos.extension.updater.KeyOSUpdateManager;
 
 public final class GboardPatchesSettingsActivity extends Activity
         implements GboardPatchesSettingsContract.Host {

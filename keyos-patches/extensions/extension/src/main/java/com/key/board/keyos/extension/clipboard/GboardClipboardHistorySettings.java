@@ -5,13 +5,13 @@
  * Repository: https://github.com/KeyOS/KeyOS
  * Licensed under the GNU General Public License v3.0 (GPLv3)
  */
-package com.key.board.extension.clipboard;
+package com.key.board.keyos.extension.clipboard;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
-import com.key.board.extension.settings.GboardPatchesSettings;
+import com.key.board.keyos.extension.settings.GboardPatchesSettings;
 
 /**
  * Settings model for the Clipboard History Duration preference.

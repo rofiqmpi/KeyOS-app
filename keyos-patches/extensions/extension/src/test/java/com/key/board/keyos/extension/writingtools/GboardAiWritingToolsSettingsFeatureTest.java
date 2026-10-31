@@ -1,4 +1,4 @@
-package com.key.board.extension.writingtools;
+package com.key.board.keyos.extension.writingtools;
 
 import android.content.Context;
 import android.content.ContextWrapper;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import com.key.board.extension.settings.GboardPatchesSettingsContract;
+import com.key.board.keyos.extension.settings.GboardPatchesSettingsContract;
 
 public final class GboardAiWritingToolsSettingsFeatureTest {
     @Test

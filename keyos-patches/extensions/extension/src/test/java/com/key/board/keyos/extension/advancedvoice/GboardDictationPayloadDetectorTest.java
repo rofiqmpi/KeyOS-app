@@ -1,4 +1,4 @@
-package com.key.board.extension.advancedvoice;
+package com.key.board.keyos.extension.advancedvoice;
 
 import static org.junit.Assert.assertEquals;
 

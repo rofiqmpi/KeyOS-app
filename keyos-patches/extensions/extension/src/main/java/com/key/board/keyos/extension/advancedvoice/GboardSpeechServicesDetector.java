@@ -1,4 +1,4 @@
-package com.key.board.extension.advancedvoice;
+package com.key.board.keyos.extension.advancedvoice;
 
 import android.content.Context;
 import android.content.pm.PackageManager;

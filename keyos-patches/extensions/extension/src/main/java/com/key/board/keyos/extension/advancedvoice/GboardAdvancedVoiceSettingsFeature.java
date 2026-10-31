@@ -5,7 +5,7 @@
  * Repository: https://github.com/KeyOS/KeyOS
  * Licensed under the GNU General Public License v3.0 (GPLv3)
  */
-package com.key.board.extension.advancedvoice;
+package com.key.board.keyos.extension.advancedvoice;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -19,11 +19,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
-import com.key.board.extension.R;
-import com.key.board.extension.settings.GboardPatchesSettingsContract;
-import com.key.board.extension.settings.GboardPatchesSettings;
-import com.key.board.extension.settings.GboardPatchesFeatureAvailability;
-import com.key.board.extension.settings.GboardSettingsText;
+import com.key.board.keyos.extension.R;
+import com.key.board.keyos.extension.settings.GboardPatchesSettingsContract;
+import com.key.board.keyos.extension.settings.GboardPatchesSettings;
+import com.key.board.keyos.extension.settings.GboardPatchesFeatureAvailability;
+import com.key.board.keyos.extension.settings.GboardSettingsText;
 
 public final class GboardAdvancedVoiceSettingsFeature
         implements GboardPatchesSettingsContract.Feature {

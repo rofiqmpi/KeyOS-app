@@ -1,4 +1,4 @@
-package com.key.board.extension.settings;
+package com.key.board.keyos.extension.settings;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;

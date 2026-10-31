@@ -1,4 +1,4 @@
-package com.key.board.extension.writingtools;
+package com.key.board.keyos.extension.writingtools;
 
 import android.content.Context;
 import android.content.ContextWrapper;

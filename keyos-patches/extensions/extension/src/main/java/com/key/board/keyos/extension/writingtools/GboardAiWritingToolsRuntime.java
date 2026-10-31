@@ -1,10 +1,10 @@
-package com.key.board.extension.writingtools;
+package com.key.board.keyos.extension.writingtools;
 
 import android.content.Context;
 import android.util.Log;
 
-import com.key.board.extension.settings.GboardEmojiSettings;
-import com.key.board.extension.settings.GboardRoundedKeysSettings;
+import com.key.board.keyos.extension.settings.GboardEmojiSettings;
+import com.key.board.keyos.extension.settings.GboardRoundedKeysSettings;
 import java.lang.reflect.Field;
 import java.util.Collections;
 import java.util.IdentityHashMap;

@@ -5,7 +5,7 @@
  * Repository: https://github.com/KeyOS/KeyOS
  * Licensed under the GNU General Public License v3.0 (GPLv3)
  */
-package com.key.board.extension.writingtools;
+package com.key.board.keyos.extension.writingtools;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -15,10 +15,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.key.board.extension.R;
-import com.key.board.extension.settings.GboardPatchesFeatureAvailability;
-import com.key.board.extension.settings.GboardPatchesSettingsContract;
-import com.key.board.extension.settings.GboardSettingsText;
+import com.key.board.keyos.extension.R;
+import com.key.board.keyos.extension.settings.GboardPatchesFeatureAvailability;
+import com.key.board.keyos.extension.settings.GboardPatchesSettingsContract;
+import com.key.board.keyos.extension.settings.GboardSettingsText;
 
 public final class GboardAiWritingToolsSettingsFeature
         implements GboardPatchesSettingsContract.Feature {

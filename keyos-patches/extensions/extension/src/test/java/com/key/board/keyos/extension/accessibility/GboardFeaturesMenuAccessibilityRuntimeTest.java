@@ -1,4 +1,4 @@
-package com.key.board.extension.accessibility;
+package com.key.board.keyos.extension.accessibility;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

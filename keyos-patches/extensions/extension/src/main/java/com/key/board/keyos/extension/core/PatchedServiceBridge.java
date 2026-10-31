@@ -1,4 +1,4 @@
-package com.key.board.extension.core;
+package com.key.board.keyos.extension.core;
 
 import android.content.Context;
 import android.content.SharedPreferences;

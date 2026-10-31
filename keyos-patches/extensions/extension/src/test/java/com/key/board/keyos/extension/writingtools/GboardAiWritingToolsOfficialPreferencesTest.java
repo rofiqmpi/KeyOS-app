@@ -1,4 +1,4 @@
-package com.key.board.extension.writingtools;
+package com.key.board.keyos.extension.writingtools;
 
 import org.junit.After;
 import org.junit.Assert;

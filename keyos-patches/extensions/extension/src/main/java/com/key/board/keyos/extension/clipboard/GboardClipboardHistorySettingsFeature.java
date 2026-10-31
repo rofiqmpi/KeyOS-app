@@ -5,7 +5,7 @@
  * Repository: https://github.com/KeyOS/KeyOS
  * Licensed under the GNU General Public License v3.0 (GPLv3)
  */
-package com.key.board.extension.clipboard;
+package com.key.board.keyos.extension.clipboard;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -15,9 +15,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.key.board.extension.R;
-import com.key.board.extension.settings.GboardPatchesSettingsContract;
-import com.key.board.extension.settings.GboardSettingsText;
+import com.key.board.keyos.extension.R;
+import com.key.board.keyos.extension.settings.GboardPatchesSettingsContract;
+import com.key.board.keyos.extension.settings.GboardSettingsText;
 
 /**
  * Settings feature that exposes the Clipboard History Duration slider.

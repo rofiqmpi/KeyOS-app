@@ -1,4 +1,4 @@
-package com.key.board.extension.emoji;
+package com.key.board.keyos.extension.emoji;
 
 import android.text.TextPaint;
 import android.widget.TextView;

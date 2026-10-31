@@ -1,4 +1,4 @@
-package com.key.board.extension.clipboard;
+package com.key.board.keyos.extension.clipboard;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

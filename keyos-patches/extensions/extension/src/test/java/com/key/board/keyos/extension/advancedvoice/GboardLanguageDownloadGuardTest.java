@@ -1,4 +1,4 @@
-package com.key.board.extension.advancedvoice;
+package com.key.board.keyos.extension.advancedvoice;
 
 import org.junit.After;
 import org.junit.Assert;

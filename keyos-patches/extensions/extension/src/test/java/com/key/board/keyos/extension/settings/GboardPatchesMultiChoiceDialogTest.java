@@ -1,4 +1,4 @@
-package com.key.board.extension.settings;
+package com.key.board.keyos.extension.settings;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
