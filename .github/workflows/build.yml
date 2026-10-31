@@ -32,20 +32,20 @@ jobs:
         uses: android-actions/setup-android@v4
 
       - name: Grant execute permission for gradlew
-        run: chmod +x pixelboard-patches/gradlew
+        run: chmod +x keyos-patches/gradlew
 
       - name: Run Unit Tests & Wiring Verification
         run: |
-          cd pixelboard-patches
+          cd keyos-patches
           ./gradlew test --info
 
       - name: Build Android Patch Bundle (.mpp)
         run: |
-          cd pixelboard-patches
+          cd keyos-patches
           ./gradlew :patches:buildAndroid
 
       - name: Upload Compiled Patch Bundle
         uses: actions/upload-artifact@v4
         with:
-          name: pixelboard-patches-bundle
-          path: pixelboard-patches/patches/build/libs/*.mpp
+          name: keyos-patches-bundle
+          path: keyos-patches/patches/build/libs/*.mpp

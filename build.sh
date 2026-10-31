@@ -20,7 +20,7 @@ for arg in "$@"; do
         -h|--help)
             echo "Usage: ./build.sh [options] [input_apk]"
             echo "Options:"
-            echo "  -r, --rebuild    Recompile patch bundle from pixelboard-patches/ using Gradle"
+            echo "  -r, --rebuild    Recompile patch bundle from keyos-patches/ using Gradle"
             echo "  -h, --help       Show this help message"
             echo ""
             echo "By default, ./build.sh runs 100% offline using the pre-bundled patches/PixelBoard.mpp."
@@ -34,21 +34,21 @@ for arg in "$@"; do
     esac
 done
 
-PATCH_VERSION=$(grep -E "^version\s*=" pixelboard-patches/gradle.properties | cut -d'=' -f2 | tr -d ' ')
+PATCH_VERSION=$(grep -E "^version\s*=" keyos-patches/gradle.properties | cut -d'=' -f2 | tr -d ' ')
 MPP_PATH="patches/PixelBoard.mpp"
 
 if [[ "$REBUILD_PATCH" == true ]] || [[ ! -f "$MPP_PATH" ]]; then
     echo "=== 🎹 Compiling PixelBoard Patch Bundle from Source ==="
-    cd pixelboard-patches
+    cd keyos-patches
     ./gradlew :patches:buildAndroid
     cd "$SCRIPT_DIR"
 
-    COMPILED_MPP="pixelboard-patches/patches/build/libs/patches-${PATCH_VERSION}.mpp"
+    COMPILED_MPP="keyos-patches/patches/build/libs/patches-${PATCH_VERSION}.mpp"
     if [[ ! -f "$COMPILED_MPP" ]]; then
-        COMPILED_MPP=$(ls pixelboard-patches/patches/build/libs/patches-*.mpp 2>/dev/null | grep -v 'javadoc' | grep -v 'sources' | head -n 1)
+        COMPILED_MPP=$(ls keyos-patches/patches/build/libs/patches-*.mpp 2>/dev/null | grep -v 'javadoc' | grep -v 'sources' | head -n 1)
     fi
     if [[ -z "${COMPILED_MPP:-}" ]] || [[ ! -f "$COMPILED_MPP" ]]; then
-        echo "❌ Error: Patch bundle failed to build at pixelboard-patches/patches/build/libs/"
+        echo "❌ Error: Patch bundle failed to build at keyos-patches/patches/build/libs/"
         exit 1
     fi
     mkdir -p patches
