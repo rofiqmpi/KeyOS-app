@@ -15,7 +15,7 @@ internal val gboardPatchesExtensionCarrierPatch = bytecodePatch(
     description = "Merge shared Gboard patches runtime extension into target APK."
 ) {
     execute {
-        mergeBundledExtension(this, "extensions/pixelboard-patches.rve")
+        mergeBundledExtension(this, "extensions/keyos-patches.rve")
     }
 }
 
