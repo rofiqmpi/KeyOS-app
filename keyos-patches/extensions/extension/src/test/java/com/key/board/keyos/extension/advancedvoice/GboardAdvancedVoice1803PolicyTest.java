@@ -8,7 +8,7 @@ import java.util.Locale;
 
 public final class GboardAdvancedVoice1803PolicyTest {
     private static final String POLICY_CLASS =
-            "com.key.board.extension.advancedvoice."
+            "com.key.board.keyos.extension.advancedvoice."
                     + "GboardAdvancedVoice1803Policy";
 
     @Test

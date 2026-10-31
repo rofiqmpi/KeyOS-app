@@ -28,7 +28,7 @@ public final class GboardOfflineSpeechLanguageFormatterTest {
     private static List<String> format(List<String> tags, Locale locale) throws Exception {
         try {
             Class<?> formatter = Class.forName(
-                    "com.key.board.extension.advancedvoice."
+                    "com.key.board.keyos.extension.advancedvoice."
                             + "GboardOfflineSpeechLanguageFormatter");
             Method method = formatter.getMethod("format", List.class, Locale.class);
             return (List<String>) method.invoke(null, tags, locale);

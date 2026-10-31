@@ -201,7 +201,7 @@ public final class GboardSettingsGroupingTest {
         return (Runnable) method.invoke(target);
     }
 
-    private static final class RecordingHost extends com.key.board.extension.settings.GboardPatchesSettingsTestHost {
+    private static final class RecordingHost extends com.key.board.keyos.extension.settings.GboardPatchesSettingsTestHost {
         private GboardPatchesSettingsContract.Feature openedFeature;
 
         @Override

@@ -104,8 +104,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.RejectedExecutionException;
 
-import com.key.board.keyos.extension.R;
-import com.key.board.keyos.extension.BuildConfig;
+import com.key.board.extension.R;
+import com.key.board.extension.BuildConfig;
 import com.key.board.keyos.extension.settings.keyboardpreview.GboardKeyboardPreviewController;
 import com.key.board.keyos.extension.updater.KeyOSUpdateFeature;
 import com.key.board.keyos.extension.updater.KeyOSUpdateManager;

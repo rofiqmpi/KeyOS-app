@@ -17,7 +17,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public final class GboardAdvancedVoice1803RuntimeReflectionTest {
     private static final String HOOKS_CLASS =
-            "com.key.board.extension.advancedvoice."
+            "com.key.board.keyos.extension.advancedvoice."
                     + "GboardAdvancedVoice1803Runtime";
 
     @Test

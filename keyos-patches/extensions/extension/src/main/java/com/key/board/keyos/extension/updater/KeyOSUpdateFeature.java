@@ -14,7 +14,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 
 import com.key.board.keyos.extension.BuildConfig;
-import com.key.board.keyos.extension.R;
+import com.key.board.extension.R;
 import com.key.board.keyos.extension.settings.GboardPatchesSettingsContract;
 import com.key.board.keyos.extension.settings.GboardSettingsText;
 

@@ -113,7 +113,7 @@ public final class GboardAiWritingToolsSettingsFeatureTest {
         return null;
     }
 
-    private static final class CapturingHost extends com.key.board.extension.settings.GboardPatchesSettingsTestHost {
+    private static final class CapturingHost extends com.key.board.keyos.extension.settings.GboardPatchesSettingsTestHost {
         private final SharedPreferences preferences;
         private final Context context;
         private String[] choiceValues;
