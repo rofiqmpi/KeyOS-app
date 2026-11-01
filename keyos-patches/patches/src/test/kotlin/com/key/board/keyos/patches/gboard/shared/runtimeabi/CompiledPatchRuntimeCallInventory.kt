@@ -92,6 +92,7 @@ internal object CompiledPatchRuntimeCallInventory {
 
         return CompiledPatchRuntimeCalls(
             unregisteredRuntimeReferences = methods
+                .filter { method -> method.key.owner != RUNTIME_CALL_ID_OWNER }
                 .flatMap(AnalyzedMethod::runtimeReferences)
                 .toSet(),
             usedCallIds = summaries.values

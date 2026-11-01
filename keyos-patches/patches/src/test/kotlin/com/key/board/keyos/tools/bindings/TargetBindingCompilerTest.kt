@@ -288,8 +288,8 @@ internal object GboardVersionBindings {
         val PRODUCT_CATALOG_PATH =
             Path.of("src/main/resources/gboard/gboard-port-product-catalog.json")
         val GENERATED_BINDINGS_PATH = Path.of(
-            "build/generated/sources/versionBindings/kotlin/main/com/akshaykadam/" +
-                "pixelboard/patches/gboard/shared/generated/GboardVersionBindings.kt",
+            "build/generated/sources/versionBindings/kotlin/main/com/key/board/" +
+                "keyos/patches/gboard/shared/generated/GboardVersionBindings.kt",
         )
     }
 }
