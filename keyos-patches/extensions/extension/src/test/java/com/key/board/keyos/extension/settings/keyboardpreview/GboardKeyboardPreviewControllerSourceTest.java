@@ -14,7 +14,7 @@ public final class GboardKeyboardPreviewControllerSourceTest {
     public void sharedShellOwnsSafeAreaLauncherAndFocusedRichContentEditor()
             throws Exception {
         String source = read(root.resolve(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/keyboardpreview/" +
+                "src/main/java/com/key/board/keyos/extension/settings/keyboardpreview/" +
                         "GboardKeyboardPreviewController.java"));
 
         Assert.assertTrue(source.contains("TARGET_KEYBOARD_DRAWABLE_ID = 0x7f0804a6"));
@@ -43,7 +43,7 @@ public final class GboardKeyboardPreviewControllerSourceTest {
     @Test
     public void patchesActivityHostsPreviewOutsideFeaturePackages() throws Exception {
         String source = read(root.resolve(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/" +
+                "src/main/java/com/key/board/keyos/extension/settings/" +
                         "GboardPatchesSettingsActivity.java"));
 
         Assert.assertTrue(source.contains("GboardKeyboardPreviewController"));

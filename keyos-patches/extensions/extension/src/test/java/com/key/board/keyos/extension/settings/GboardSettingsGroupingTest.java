@@ -80,10 +80,10 @@ public final class GboardSettingsGroupingTest {
     @Test
     public void registryUsesFocusedKeyboardGroupsInRequestedOrder() throws Exception {
         String registrySource = readSource(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+                "src/main/java/com/key/board/keyos/extension/settings/"
                         + "GboardPatchesSettingsFeatureRegistry.java");
         String aiVoiceGroupSource = readSource(
-                "src/main/java/com/akshaykadam/pixelboard/extension/keyboard/"
+                "src/main/java/com/key/board/keyos/extension/keyboard/"
                         + "GboardAiVoiceSettingsGroupFeature.java");
 
         assertInOrder(registrySource,
@@ -96,10 +96,10 @@ public final class GboardSettingsGroupingTest {
     @Test
     public void featureAvailabilityIncludesRetainedMarkersAndRegistryUsesIt() throws Exception {
         String availabilitySource = readSource(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+                "src/main/java/com/key/board/keyos/extension/settings/"
                         + "GboardPatchesFeatureAvailability.java");
         String patchSource = readSource(
-                "../../patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/registry/"
+                "../../patches/src/main/kotlin/com/key/board/keyos/patches/gboard/registry/"
                         + "GboardPatchRegistry.kt");
 
         Assert.assertTrue(availabilitySource.contains("FEATURE_ADVANCED_VOICE_TYPING"));

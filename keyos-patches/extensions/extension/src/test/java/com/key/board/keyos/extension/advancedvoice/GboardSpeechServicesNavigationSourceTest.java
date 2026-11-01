@@ -12,7 +12,7 @@ public final class GboardSpeechServicesNavigationSourceTest {
     public void activityOpensOfficialSpeechAppsWithStoreAndToastFallbacks()
             throws Exception {
         String activity = new String(Files.readAllBytes(repositoryRoot().resolve(
-                "extensions/extension/src/main/java/com/akshaykadam/pixelboard/extension/"
+                "extensions/extension/src/main/java/com/key/board/keyos/extension/"
                         + "settings/GboardPatchesSettingsActivity.java")), StandardCharsets.UTF_8);
 
         Assert.assertTrue(activity.contains("public void openSpeechRecognitionAndSynthesisStoreListing()"));
@@ -37,7 +37,7 @@ public final class GboardSpeechServicesNavigationSourceTest {
     @Test
     public void navigationFailureToastCannotEscapeIntoTheHostApp() throws Exception {
         String activity = new String(Files.readAllBytes(repositoryRoot().resolve(
-                "extensions/extension/src/main/java/com/akshaykadam/pixelboard/extension/"
+                "extensions/extension/src/main/java/com/key/board/keyos/extension/"
                         + "settings/GboardPatchesSettingsActivity.java")), StandardCharsets.UTF_8);
 
         int helperStart = activity.indexOf("private void showSafeToast(");

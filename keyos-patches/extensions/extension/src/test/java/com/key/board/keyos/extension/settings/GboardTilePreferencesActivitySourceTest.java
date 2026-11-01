@@ -13,7 +13,7 @@ public final class GboardTilePreferencesActivitySourceTest {
             throws Exception {
         String activitySource = new String(
                 Files.readAllBytes(Path.of(
-                        "src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+                        "src/main/java/com/key/board/keyos/extension/settings/"
                                 + "GboardTilePreferencesActivity.java")),
                 StandardCharsets.UTF_8);
 

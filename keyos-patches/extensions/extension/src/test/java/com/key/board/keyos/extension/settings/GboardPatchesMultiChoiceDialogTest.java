@@ -25,7 +25,7 @@ public final class GboardPatchesMultiChoiceDialogTest {
     @Test
     public void nativeMultiChoiceListDoesNotCompeteWithACustomPanel() throws Exception {
         String activity = new String(Files.readAllBytes(Path.of(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+                "src/main/java/com/key/board/keyos/extension/settings/"
                         + "GboardPatchesSettingsActivity.java")), StandardCharsets.UTF_8)
                 .replace("\r\n", "\n");
         int methodStart = activity.indexOf("public void showMultiChoiceDialog(");
