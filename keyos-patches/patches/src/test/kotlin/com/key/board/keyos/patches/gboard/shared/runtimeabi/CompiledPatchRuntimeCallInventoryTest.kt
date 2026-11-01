@@ -330,13 +330,13 @@ class CompiledPatchRuntimeCallInventoryTest {
     @Test
     fun `split raw ABI literal built with StringBuilder is reported`() {
         val owner = "fixture/SplitRawReference"
-        val expected = "Lcom/akshaykadam/pixelboard/extension/example/Runtime;->call()V"
+        val expected = "Lcom/key/board/keyos/extension/example/Runtime;->call()V"
         val classes = fixtureClass(owner) { writer ->
             writer.method("rawReference", "()Ljava/lang/String;") {
                 visitTypeInsn(org.objectweb.asm.Opcodes.NEW, "java/lang/StringBuilder")
                 visitInsn(DUP)
                 visitMethodInsn(INVOKESPECIAL, "java/lang/StringBuilder", "<init>", "()V", false)
-                visitLdcInsn("Lcom/akshaykadam/pixelboard/")
+                visitLdcInsn("Lcom/key/board/keyos/")
                 visitMethodInsn(
                     INVOKEVIRTUAL,
                     "java/lang/StringBuilder",
@@ -384,7 +384,7 @@ class CompiledPatchRuntimeCallInventoryTest {
                     "(Ljava/lang/String;)Ljava/lang/StringBuilder;",
                     false,
                 )
-                visitLdcInsn("Lcom/akshaykadam/pixelboard/")
+                visitLdcInsn("Lcom/key/board/keyos/")
                 visitInsn(POP)
                 visitMethodInsn(
                     INVOKEVIRTUAL,
@@ -410,7 +410,7 @@ class CompiledPatchRuntimeCallInventoryTest {
                 "UNUSED",
                 "Ljava/lang/String;",
                 null,
-                "Lcom/akshaykadam/pixelboard/extension/example/Runtime;->call()V",
+                "Lcom/key/board/keyos/extension/example/Runtime;->call()V",
             ).visitEnd()
         }
 
@@ -455,19 +455,19 @@ class CompiledPatchRuntimeCallInventoryTest {
 
     private companion object {
         const val RUNTIME_CALL_ID_OWNER =
-            "com/akshaykadam/pixelboard/patches/gboard/shared/runtimeabi/RuntimeCallId"
+            "com/key/board/patches/gboard/shared/runtimeabi/RuntimeCallId"
         const val RUNTIME_CALL_ID_DESCRIPTOR = "L$RUNTIME_CALL_ID_OWNER;"
         const val RUNTIME_CALL_EMITTER_OWNER =
-            "com/akshaykadam/pixelboard/patches/gboard/shared/runtimeabi/RuntimeCallEmitter"
+            "com/key/board/patches/gboard/shared/runtimeabi/RuntimeCallEmitter"
         const val SOFT_KEY_FEATURE_OWNER =
-            "com/akshaykadam/pixelboard/patches/gboard/shared/GboardSoftKeyFamilyFeature"
+            "com/key/board/patches/gboard/shared/GboardSoftKeyFamilyFeature"
         const val SOFT_KEY_COMPOSER_OWNER =
-            "com/akshaykadam/pixelboard/patches/gboard/shared/GboardSoftKeyFamilyComposerKt"
+            "com/key/board/patches/gboard/shared/GboardSoftKeyFamilyComposerKt"
         const val SOFT_KEY_EMITTER_NAME = "emitSoftKeyRuntimeCall"
         const val GESTURE_COMPOSER_OWNER =
-            "com/akshaykadam/pixelboard/patches/gboard/shared/GboardGestureFamilyComposerKt"
+            "com/key/board/patches/gboard/shared/GboardGestureFamilyComposerKt"
         const val GESTURE_STAGE_OWNER =
-            "com/akshaykadam/pixelboard/patches/gboard/shared/GboardGestureFamilyStage"
+            "com/key/board/patches/gboard/shared/GboardGestureFamilyStage"
         const val GESTURE_EMITTER_NAME = "emitGestureRuntimeCall"
     }
 }

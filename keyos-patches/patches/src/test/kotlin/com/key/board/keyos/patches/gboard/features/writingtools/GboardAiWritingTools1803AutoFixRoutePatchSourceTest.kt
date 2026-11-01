@@ -11,7 +11,7 @@ class GboardAiWritingTools1803AutoFixRoutePatchSourceTest {
     fun `formal 1803 routes only auto fix through the stock writing tools v2 builder`() {
         val source = Files.readString(
             repositoryRoot().resolve(
-                "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/" +
+                "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/" +
                     "features/writingtools/GboardAiWritingToolsFlagValuePatch.kt",
             ),
         )

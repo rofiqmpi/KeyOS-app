@@ -202,8 +202,8 @@ val generateSettingsText = tasks.register("generateSettingsText") {
             appendLine("import java.util.HashMap;")
             appendLine("import java.util.Map;")
             appendLine()
-            appendLine("import com.key.board.keyos.extension.R;
-import com.key.board.keyos.extension.BuildConfig;")
+            appendLine("import com.key.board.keyos.extension.R;")
+            appendLine("import com.key.board.keyos.extension.BuildConfig;")
             appendLine()
             appendLine("final class GboardSettingsTextCatalog {")
             appendLine("    private static final Map<String, Map<Integer, String>> CATALOGS = createCatalogs();")

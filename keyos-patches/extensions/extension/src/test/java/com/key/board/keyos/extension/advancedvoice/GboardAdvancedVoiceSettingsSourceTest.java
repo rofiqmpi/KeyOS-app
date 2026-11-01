@@ -13,13 +13,13 @@ public final class GboardAdvancedVoiceSettingsSourceTest {
             throws Exception {
         Path root = repositoryRoot();
         String feature = read(root,
-                "extensions/extension/src/main/java/com/akshaykadam/pixelboard/extension/"
+                "extensions/extension/src/main/java/com/key/board/keyos/extension/"
                         + "advancedvoice/GboardAdvancedVoiceSettingsFeature.java");
         String keyboardGroup = read(root,
-                "extensions/extension/src/main/java/com/akshaykadam/pixelboard/extension/"
+                "extensions/extension/src/main/java/com/key/board/keyos/extension/"
                         + "keyboard/GboardAiVoiceSettingsGroupFeature.java");
         String availability = read(root,
-                "extensions/extension/src/main/java/com/akshaykadam/pixelboard/extension/"
+                "extensions/extension/src/main/java/com/key/board/keyos/extension/"
                         + "settings/GboardPatchesFeatureAvailability.java");
         String settingsText = read(root,
                 "extensions/extension/src/main/settings-text/gboard_settings_text.xml");

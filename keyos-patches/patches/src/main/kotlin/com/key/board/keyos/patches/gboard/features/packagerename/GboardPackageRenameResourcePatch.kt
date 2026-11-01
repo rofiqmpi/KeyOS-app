@@ -638,6 +638,6 @@ private data class SettingsIdentity(
 )
 
 private const val DOUBLE_PREFIX =
-    "com.key.board"
+    "com.key.board.com.key.board"
 
 private const val REQUIRED_SPLITS_METADATA = "com.android.vending.splits.required"

@@ -12,7 +12,7 @@ class GboardAdvancedVoiceFeatureMarkerSourceTest {
     fun `marker adds exact speech package visibility without query all packages`() {
         val source = Files.readString(
             repositoryRoot().resolve(
-                "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/features/"
+                "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/features/"
                     + "advancedvoice/GboardAdvancedVoiceFeatureMarkerPatch.kt",
             ),
             StandardCharsets.UTF_8,

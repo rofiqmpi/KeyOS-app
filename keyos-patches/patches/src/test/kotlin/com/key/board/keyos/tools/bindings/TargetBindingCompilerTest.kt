@@ -224,7 +224,7 @@ internal object GboardVersionBindings {
         assertEquals(
             listOf(
                 Path.of(
-                    "src/bindingCompiler/kotlin/com/akshaykadam/pixelboard/tools/bindings/" +
+                    "src/bindingCompiler/kotlin/com/key/board/keyos/tools/bindings/" +
                         "TargetBindingCompiler.kt",
                 ),
             ),
@@ -232,7 +232,7 @@ internal object GboardVersionBindings {
         )
         val generator = Files.readString(
             Path.of(
-                "src/bindingCompiler/kotlin/com/akshaykadam/pixelboard/tools/bindings/" +
+                "src/bindingCompiler/kotlin/com/key/board/keyos/tools/bindings/" +
                     "TargetBindingGenerator.kt",
             ),
             StandardCharsets.UTF_8,
@@ -288,8 +288,8 @@ internal object GboardVersionBindings {
         val PRODUCT_CATALOG_PATH =
             Path.of("src/main/resources/gboard/gboard-port-product-catalog.json")
         val GENERATED_BINDINGS_PATH = Path.of(
-            "build/generated/sources/versionBindings/kotlin/main/com/akshaykadam/" +
-                "pixelboard/patches/gboard/shared/generated/GboardVersionBindings.kt",
+            "build/generated/sources/versionBindings/kotlin/main/com/key/board/" +
+                "patches/gboard/shared/generated/GboardVersionBindings.kt",
         )
     }
 }

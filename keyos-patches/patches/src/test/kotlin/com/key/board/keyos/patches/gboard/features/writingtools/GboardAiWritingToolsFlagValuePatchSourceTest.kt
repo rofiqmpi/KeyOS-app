@@ -31,7 +31,7 @@ class GboardAiWritingToolsFlagValuePatchSourceTest {
         val source = String(
             Files.readAllBytes(
                 Path.of(
-                    "src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/features/" +
+                    "src/main/kotlin/com/key/board/keyos/patches/gboard/features/" +
                         "writingtools/GboardAiWritingToolsFlagValuePatch.kt"
                 )
             ),
@@ -48,7 +48,7 @@ class GboardAiWritingToolsFlagValuePatchSourceTest {
     private fun readSource(fileName: String): String = String(
         Files.readAllBytes(
             Path.of(
-                "src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/features/" +
+                "src/main/kotlin/com/key/board/keyos/patches/gboard/features/" +
                     "writingtools/$fileName",
             ),
         ),

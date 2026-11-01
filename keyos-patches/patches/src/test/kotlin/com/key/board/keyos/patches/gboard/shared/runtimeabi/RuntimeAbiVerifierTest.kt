@@ -17,7 +17,7 @@ class RuntimeAbiVerifierTest {
             listOf(
                 RuntimeAbiMismatch.MissingMethod(
                     RuntimeAbi(
-                        owner = "Lcom/akshaykadam/pixelboard/extension/rambler/GboardRambler1803OfficialSelectionRuntime;",
+                        owner = "Lcom/key/board/keyos/extension/rambler/GboardRambler1803OfficialSelectionRuntime;",
                         name = "enterVoiceSettingsScope",
                         parameters = emptyList(),
                         returnType = "V",

@@ -10,7 +10,7 @@ import java.nio.file.Path;
 public final class GboardPatchesRestartSourceTest {
     @Test
     public void toolbarUsesSingleArrowThemeColorTooltipAndReverseRotation() throws Exception {
-        String activity = read("src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+        String activity = read("src/main/java/com/key/board/keyos/extension/settings/"
                 + "GboardPatchesSettingsActivity.java");
 
         Assert.assertTrue(activity.contains("buildRestartButton()"));
@@ -26,10 +26,10 @@ public final class GboardPatchesRestartSourceTest {
 
     @Test
     public void requestRestartsDirectlyIntoCurrentPatchesPage() throws Exception {
-        String activity = read("src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+        String activity = read("src/main/java/com/key/board/keyos/extension/settings/"
                 + "GboardPatchesSettingsActivity.java");
         String normalizedActivity = activity.replace("\r\n", "\n");
-        String navigation = read("src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+        String navigation = read("src/main/java/com/key/board/keyos/extension/settings/"
                 + "GboardPatchesNavigationPath.java");
 
         Assert.assertTrue(activity.contains("Intent.makeRestartActivityTask"));
@@ -57,9 +57,9 @@ public final class GboardPatchesRestartSourceTest {
     @Test
     public void restartGuardsStockCrashRecoveryCleanupAndRestoresAfterStartup()
             throws Exception {
-        String activity = read("src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+        String activity = read("src/main/java/com/key/board/keyos/extension/settings/"
                 + "GboardPatchesSettingsActivity.java");
-        String guard = read("src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+        String guard = read("src/main/java/com/key/board/keyos/extension/settings/"
                 + "GboardRestartCrashRecoveryGuard.java");
 
         int superOnCreate = activity.indexOf("super.onCreate(savedInstanceState);");

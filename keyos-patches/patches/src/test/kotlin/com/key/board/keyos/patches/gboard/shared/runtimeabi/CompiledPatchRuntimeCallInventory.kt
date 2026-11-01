@@ -41,27 +41,29 @@ internal data class CompiledPatchRuntimeCalls(
 
 internal object CompiledPatchRuntimeCallInventory {
     private const val RUNTIME_ABI_PACKAGE =
-        "com/akshaykadam/pixelboard/patches/gboard/shared/runtimeabi"
+        "com/key/board/patches/gboard/shared/runtimeabi"
     private const val RUNTIME_CALL_ID_OWNER = "$RUNTIME_ABI_PACKAGE/RuntimeCallId"
     private const val RUNTIME_CALL_ID_DESCRIPTOR = "L$RUNTIME_CALL_ID_OWNER;"
     private const val RUNTIME_CALL_EMITTER_OWNER = "$RUNTIME_ABI_PACKAGE/RuntimeCallEmitter"
     private const val SOFT_KEY_FEATURE_OWNER =
-        "com/akshaykadam/pixelboard/patches/gboard/shared/GboardSoftKeyFamilyFeature"
+        "com/key/board/patches/gboard/shared/GboardSoftKeyFamilyFeature"
     private const val SOFT_KEY_COMPOSER_OWNER =
-        "com/akshaykadam/pixelboard/patches/gboard/shared/GboardSoftKeyFamilyComposerKt"
+        "com/key/board/patches/gboard/shared/GboardSoftKeyFamilyComposerKt"
     private const val SOFT_KEY_EMITTER_NAME = "emitSoftKeyRuntimeCall"
     private const val GESTURE_COMPOSER_OWNER =
-        "com/akshaykadam/pixelboard/patches/gboard/shared/GboardGestureFamilyComposerKt"
+        "com/key/board/patches/gboard/shared/GboardGestureFamilyComposerKt"
     private const val GESTURE_STAGE_OWNER =
-        "com/akshaykadam/pixelboard/patches/gboard/shared/GboardGestureFamilyStage"
+        "com/key/board/patches/gboard/shared/GboardGestureFamilyStage"
     private const val GESTURE_EMITTER_NAME = "emitGestureRuntimeCall"
     private const val STRING_BUILDER_OWNER = "java/lang/StringBuilder"
 
     private val runtimeReference = Regex(
-        "Lcom/akshaykadam/pixelboard/extension[^;]*;->" +
+        "Lcom/key/board/keyos/extension[^;]*;->" +
             "[A-Za-z0-9_$<>]+\\([A-Za-z0-9_/$;\\[]*\\)[A-Za-z0-9_/$;\\[]+"
     )
     private val callIdsByName = RuntimeCallId.entries.associateBy(RuntimeCallId::name)
+    private val registeredRuntimeReferences = RuntimeCallId.entries
+        .mapTo(hashSetOf(), RuntimeCallId::encodedAbi)
 
     fun read(classesRoot: File): CompiledPatchRuntimeCalls {
         require(classesRoot.isDirectory) { "Compiled patch classes not found: $classesRoot" }
@@ -92,7 +94,9 @@ internal object CompiledPatchRuntimeCallInventory {
 
         return CompiledPatchRuntimeCalls(
             unregisteredRuntimeReferences = methods
+                .filter { method -> !method.key.owner.startsWith("$RUNTIME_ABI_PACKAGE/") }
                 .flatMap(AnalyzedMethod::runtimeReferences)
+                .filterNot(registeredRuntimeReferences::contains)
                 .toSet(),
             usedCallIds = summaries.values
                 .flatMapTo(linkedSetOf(), RuntimeCallFlow::callIds)
@@ -138,7 +142,7 @@ internal object CompiledPatchRuntimeCallInventory {
                             }
                             instruction is FieldInsnNode &&
                                 instruction.opcode == PUTSTATIC &&
-                                instruction.desc == RUNTIME_CALL_ID_DESCRIPTOR -> {
+                                instruction.desc.isRuntimeCallIdDescriptor() -> {
                                 pendingCall?.let { call ->
                                     put(FieldKey(instruction.owner, instruction.name, instruction.desc), call)
                                 }
@@ -352,14 +356,18 @@ internal object CompiledPatchRuntimeCallInventory {
     }
 
     private fun MethodInsnNode.isRuntimeCallEmitterInvocation(): Boolean =
-        owner == RUNTIME_CALL_EMITTER_OWNER &&
+        owner.endsWith("/RuntimeCallEmitter") &&
             name == "invoke" &&
-            desc.startsWith("($RUNTIME_CALL_ID_DESCRIPTOR")
+            desc.startsWith("(L") &&
+            desc.contains("/RuntimeCallId;")
 
     private fun FieldInsnNode.runtimeCallId(): RuntimeCallId? =
         takeIf { field ->
-            field.owner == RUNTIME_CALL_ID_OWNER && field.desc == RUNTIME_CALL_ID_DESCRIPTOR
+            field.owner.endsWith("/RuntimeCallId") && field.desc.isRuntimeCallIdDescriptor()
         }?.let { field -> callIdsByName[field.name] }
+
+    private fun String.isRuntimeCallIdDescriptor(): Boolean =
+        endsWith("/RuntimeCallId;")
 
     private fun AbstractInsnNode.isMetadataOrNop(): Boolean =
         this is LabelNode ||

@@ -12,7 +12,7 @@ public final class GboardPatchesSettingsActivitySourceTest {
     public void activityRendersSectionsStatusBlocksAndExplicitPreviewAffordances()
             throws Exception {
         String source = readSource(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+                "src/main/java/com/key/board/keyos/extension/settings/"
                         + "GboardPatchesSettingsActivity.java");
 
         Assert.assertTrue(source.contains("screen.getSections()"));
@@ -27,10 +27,10 @@ public final class GboardPatchesSettingsActivitySourceTest {
     @Test
     public void contractAndActivitySupportVideoPreviewMedia() throws Exception {
         String contractSource = readSource(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+                "src/main/java/com/key/board/keyos/extension/settings/"
                         + "GboardPatchesSettingsContract.java");
         String activitySource = readSource(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+                "src/main/java/com/key/board/keyos/extension/settings/"
                         + "GboardPatchesSettingsActivity.java");
 
         Assert.assertTrue(contractSource.contains("class PreviewVideo"));
@@ -51,7 +51,7 @@ public final class GboardPatchesSettingsActivitySourceTest {
     public void selectorRowsRenderCurrentValueAsSupportLineInsteadOfTrailingRail()
             throws Exception {
         String source = readSource(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+                "src/main/java/com/key/board/keyos/extension/settings/"
                         + "GboardPatchesSettingsActivity.java");
 
         Assert.assertTrue(source.contains("buildSelectorSupportLine("));
@@ -64,7 +64,7 @@ public final class GboardPatchesSettingsActivitySourceTest {
     @Test
     public void advancedVoiceFeatureUsesStableSettingsTextHelper() throws Exception {
         String source = readSource(
-                "src/main/java/com/akshaykadam/pixelboard/extension/advancedvoice/"
+                "src/main/java/com/key/board/keyos/extension/advancedvoice/"
                         + "GboardAdvancedVoiceSettingsFeature.java");
 
         Assert.assertTrue(source.contains("GboardSettingsText.get("));
@@ -73,7 +73,7 @@ public final class GboardPatchesSettingsActivitySourceTest {
     @Test
     public void dialogsOnlyMarkManagedShownAfterSuccessfulShow() throws Exception {
         String source = readSource(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+                "src/main/java/com/key/board/keyos/extension/settings/"
                         + "GboardPatchesSettingsActivity.java");
 
         assertOccursInOrder(
@@ -101,7 +101,7 @@ public final class GboardPatchesSettingsActivitySourceTest {
     @Test
     public void choiceDialogUsesStableCancelText() throws Exception {
         String source = readSource(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+                "src/main/java/com/key/board/keyos/extension/settings/"
                         + "GboardPatchesSettingsActivity.java");
         String method = extractMethod(source, "public void showChoiceDialog(");
 
@@ -113,7 +113,7 @@ public final class GboardPatchesSettingsActivitySourceTest {
     @Test
     public void choiceDialogAllowsSelectionsWithoutACustomAction() throws Exception {
         String source = readSource(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+                "src/main/java/com/key/board/keyos/extension/settings/"
                         + "GboardPatchesSettingsActivity.java");
         String method = extractMethod(source, "public void showChoiceDialog(");
 
@@ -126,7 +126,7 @@ public final class GboardPatchesSettingsActivitySourceTest {
     @Test
     public void positiveIntegerDialogShowsFeatureRangeErrorsInline() throws Exception {
         String source = readSource(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+                "src/main/java/com/key/board/keyos/extension/settings/"
                         + "GboardPatchesSettingsActivity.java");
         String method = extractMethod(source, "public void showPositiveIntegerDialog(");
 
@@ -137,7 +137,7 @@ public final class GboardPatchesSettingsActivitySourceTest {
     @Test
     public void previewVideoErrorsAreHandledInsideSettingsHost() throws Exception {
         String source = readSource(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+                "src/main/java/com/key/board/keyos/extension/settings/"
                         + "GboardPatchesSettingsActivity.java");
         String method = extractMethod(source, "private View buildPreviewVideoView(");
 
@@ -148,7 +148,7 @@ public final class GboardPatchesSettingsActivitySourceTest {
     @Test
     public void mainThreadApplyScreenFallsBackToFeatureErrorScreen() throws Exception {
         String source = readSource(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+                "src/main/java/com/key/board/keyos/extension/settings/"
                         + "GboardPatchesSettingsActivity.java");
         String method = extractMethod(source, "private void buildAndApplyCurrentScreen(");
 
@@ -162,7 +162,7 @@ public final class GboardPatchesSettingsActivitySourceTest {
     @Test
     public void featureNavigationRestoresParentScrollPositions() throws Exception {
         String source = readSource(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+                "src/main/java/com/key/board/keyos/extension/settings/"
                         + "GboardPatchesSettingsActivity.java");
         String openFeature = extractMethod(source, "public void openFeature(");
         String navigateBack = extractMethod(source, "private boolean navigateBack(");
@@ -181,10 +181,10 @@ public final class GboardPatchesSettingsActivitySourceTest {
     @Test
     public void screenPrimaryActionRendersBelowScrollableContent() throws Exception {
         String contractSource = readSource(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+                "src/main/java/com/key/board/keyos/extension/settings/"
                         + "GboardPatchesSettingsContract.java");
         String activitySource = readSource(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+                "src/main/java/com/key/board/keyos/extension/settings/"
                         + "GboardPatchesSettingsActivity.java");
         String buildContent = extractMethod(activitySource, "private View buildContentView(");
         String applyScreen = extractMethod(activitySource, "private void applyScreen(");
@@ -200,7 +200,7 @@ public final class GboardPatchesSettingsActivitySourceTest {
     @Test
     public void directFeaturePathsResetSyntheticParentScrollPositions() throws Exception {
         String source = readSource(
-                "src/main/java/com/akshaykadam/pixelboard/extension/settings/"
+                "src/main/java/com/key/board/keyos/extension/settings/"
                         + "GboardPatchesSettingsActivity.java");
         String openFeaturePath = extractMethod(source, "private void openFeaturePath(");
         String restoreNavigationPath = extractMethod(

@@ -11,7 +11,7 @@ class GboardFeaturesMenuAccessibilityPatchSourceTest {
     fun `features menu accessibility patch targets AccessPointsPanel classes and emits runtime calls`() {
         val source = Files.readString(
             repositoryRoot().resolve(
-                "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/" +
+                "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/" +
                     "features/accessibility/GboardFeaturesMenuAccessibilityPatch.kt",
             ),
             StandardCharsets.UTF_8,

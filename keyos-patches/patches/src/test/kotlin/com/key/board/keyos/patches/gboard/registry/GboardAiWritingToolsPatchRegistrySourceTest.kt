@@ -24,7 +24,7 @@ class GboardAiWritingToolsPatchRegistrySourceTest {
         val source = String(
             Files.readAllBytes(
                 Path.of(
-                    "src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/registry/" +
+                    "src/main/kotlin/com/key/board/keyos/patches/gboard/registry/" +
                         "GboardPatchRegistry.kt"
                 )
             ),
@@ -32,7 +32,7 @@ class GboardAiWritingToolsPatchRegistrySourceTest {
         )
         val contributionWiring = Files.readString(
             Path.of(
-                "src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/registry/" +
+                "src/main/kotlin/com/key/board/keyos/patches/gboard/registry/" +
                     "GboardContributionWiring.kt",
             ),
         )
@@ -114,7 +114,7 @@ class GboardAiWritingToolsPatchRegistrySourceTest {
 
         val contributionWiring = Files.readString(
             repositoryRoot.resolve(
-                "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/registry/" +
+                "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/registry/" +
                     "GboardContributionWiring.kt",
             ),
         )

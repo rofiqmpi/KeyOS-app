@@ -13,13 +13,13 @@ public final class GboardOfflineSpeechSupportSourceTest {
             throws Exception {
         Path root = repositoryRoot();
         String contract = read(root,
-                "extensions/extension/src/main/java/com/akshaykadam/pixelboard/extension/"
+                "extensions/extension/src/main/java/com/key/board/keyos/extension/"
                         + "settings/GboardPatchesSettingsContract.java");
         String feature = read(root,
-                "extensions/extension/src/main/java/com/akshaykadam/pixelboard/extension/"
+                "extensions/extension/src/main/java/com/key/board/keyos/extension/"
                         + "advancedvoice/GboardAdvancedVoiceSettingsFeature.java");
         String activity = read(root,
-                "extensions/extension/src/main/java/com/akshaykadam/pixelboard/extension/"
+                "extensions/extension/src/main/java/com/key/board/keyos/extension/"
                         + "settings/GboardPatchesSettingsActivity.java");
 
         Assert.assertTrue(contract.contains("default boolean requiresOfflineSpeechLanguages()"));

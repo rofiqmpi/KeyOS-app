@@ -114,7 +114,7 @@ public final class GboardAiWritingToolsRuntimeLoggingTest {
     @Test
     public void failureSitesUseTheBoundedLogger() throws Exception {
         String source = new String(Files.readAllBytes(Path.of(
-                "src/main/java/com/akshaykadam/pixelboard/extension/writingtools/"
+                "src/main/java/com/key/board/keyos/extension/writingtools/"
                         + "GboardAiWritingToolsRuntime.java")), StandardCharsets.UTF_8)
                 .replace("\r\n", "\n");
 
