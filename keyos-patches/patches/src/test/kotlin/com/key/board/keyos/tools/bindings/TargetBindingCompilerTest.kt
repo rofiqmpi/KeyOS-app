@@ -224,7 +224,7 @@ internal object GboardVersionBindings {
         assertEquals(
             listOf(
                 Path.of(
-                    "src/bindingCompiler/kotlin/com/akshaykadam/pixelboard/tools/bindings/" +
+                    "src/bindingCompiler/kotlin/com/key/board/keyos/tools/bindings/" +
                         "TargetBindingCompiler.kt",
                 ),
             ),
@@ -232,7 +232,7 @@ internal object GboardVersionBindings {
         )
         val generator = Files.readString(
             Path.of(
-                "src/bindingCompiler/kotlin/com/akshaykadam/pixelboard/tools/bindings/" +
+                "src/bindingCompiler/kotlin/com/key/board/keyos/tools/bindings/" +
                     "TargetBindingGenerator.kt",
             ),
             StandardCharsets.UTF_8,

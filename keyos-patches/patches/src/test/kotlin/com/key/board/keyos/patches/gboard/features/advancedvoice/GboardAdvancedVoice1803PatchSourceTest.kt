@@ -13,7 +13,7 @@ class GboardAdvancedVoice1803PatchSourceTest {
     fun `formal zh tw patch contains only the admitted locale mdd and formatter graph`() {
         val source = Files.readString(
             repositoryRoot().resolve(
-                "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/" +
+                "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/" +
                     "features/advancedvoice/GboardAdvancedVoice1803ZhTwPatch.kt",
             ),
             StandardCharsets.UTF_8,

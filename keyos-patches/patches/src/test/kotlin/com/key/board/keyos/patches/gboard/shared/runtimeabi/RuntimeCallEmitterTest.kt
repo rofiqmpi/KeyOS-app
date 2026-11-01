@@ -9,7 +9,7 @@ class RuntimeCallEmitterTest {
     fun `emits an exact static invocation from a semantic call id`() {
         assertEquals(
             "invoke-static {}, " +
-                "Lcom/akshaykadam/pixelboard/extension/rambler/" +
+                "Lcom/key/board/keyos/extension/rambler/" +
                 "GboardRambler1803OfficialSelectionRuntime;->enterVoiceSettingsScope()V",
             RuntimeCallEmitter.invoke(
                 RuntimeCallId.RAMBLER_RUNTIME_ENTER_VOICE_SETTINGS_SCOPE,
@@ -22,7 +22,7 @@ class RuntimeCallEmitterTest {
     fun `emits a static range invocation without exposing an opcode string`() {
         assertEquals(
             "invoke-static/range {v4 .. v4}, " +
-                "Lcom/akshaykadam/pixelboard/extension/advancedvoice/" +
+                "Lcom/key/board/keyos/extension/advancedvoice/" +
                 "GboardAdvancedVoice1803Runtime;->seedApplicationContext(Landroid/content/Context;)V",
             RuntimeCallEmitter.invoke(
                 RuntimeCallId.ADVANCED_VOICE_RUNTIME_SEED_APPLICATION_CONTEXT,

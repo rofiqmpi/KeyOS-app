@@ -13,7 +13,7 @@ class GboardRambler1803PatchSourceTest {
     fun `official selector replaces all retired launch fallback and session injections`() {
         val source = Files.readString(
             repositoryRoot().resolve(
-                "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/" +
+                "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/" +
                     "features/rambler/GboardRambler1803OfficialSelectorPatch.kt",
             ),
             StandardCharsets.UTF_8,

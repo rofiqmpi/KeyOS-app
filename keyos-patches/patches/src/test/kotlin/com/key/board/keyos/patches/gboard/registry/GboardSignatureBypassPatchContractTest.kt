@@ -98,7 +98,7 @@ class GboardSignatureBypassPatchContractTest {
         const val SIGNATURE_BYPASS_DESCRIPTION =
             "Bypass Gboard signature whitelist checks and force them to pass."
         const val SIGNATURE_PATCH_PATH =
-            "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/features/" +
+            "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/features/" +
                 "signaturebypass/GboardSignatureBypassBytecodePatch.kt"
         const val BINDINGS_PROFILE_PATH =
             "patches/src/main/resources/gboard/gboard-version-bindings.json"

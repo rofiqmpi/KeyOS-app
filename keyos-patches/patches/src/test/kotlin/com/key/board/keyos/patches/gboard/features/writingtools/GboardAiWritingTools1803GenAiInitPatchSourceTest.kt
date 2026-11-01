@@ -10,7 +10,7 @@ class GboardAiWritingTools1803GenAiInitPatchSourceTest {
     fun `formal 1803 promotes only the transient unknown client at the GenAI init call site`() {
         val source = Files.readString(
             repositoryRoot().resolve(
-                "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/" +
+                "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/" +
                     "features/writingtools/GboardAiWritingToolsFlagValuePatch.kt",
             ),
         )
@@ -31,7 +31,7 @@ class GboardAiWritingTools1803GenAiInitPatchSourceTest {
     fun `formal 1803 also constructs SmartEdit while the client type is transient unknown`() {
         val source = Files.readString(
             repositoryRoot().resolve(
-                "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/" +
+                "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/" +
                     "features/writingtools/GboardAiWritingToolsFlagValuePatch.kt",
             ),
         )
@@ -50,7 +50,7 @@ class GboardAiWritingTools1803GenAiInitPatchSourceTest {
     fun `formal 1803 retries GenAI manager after Smart Dictation client refresh`() {
         val source = Files.readString(
             repositoryRoot().resolve(
-                "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/" +
+                "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/" +
                     "features/writingtools/GboardAiWritingToolsFlagValuePatch.kt",
             ),
         )
