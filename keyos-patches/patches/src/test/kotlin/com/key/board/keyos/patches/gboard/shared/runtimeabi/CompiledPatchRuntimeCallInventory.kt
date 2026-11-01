@@ -62,6 +62,8 @@ internal object CompiledPatchRuntimeCallInventory {
             "[A-Za-z0-9_$<>]+\\([A-Za-z0-9_/$;\\[]*\\)[A-Za-z0-9_/$;\\[]+"
     )
     private val callIdsByName = RuntimeCallId.entries.associateBy(RuntimeCallId::name)
+    private val registeredRuntimeReferences = RuntimeCallId.entries
+        .mapTo(hashSetOf(), RuntimeCallId::encodedAbi)
 
     fun read(classesRoot: File): CompiledPatchRuntimeCalls {
         require(classesRoot.isDirectory) { "Compiled patch classes not found: $classesRoot" }
@@ -94,6 +96,7 @@ internal object CompiledPatchRuntimeCallInventory {
             unregisteredRuntimeReferences = methods
                 .filter { method -> !method.key.owner.startsWith("$RUNTIME_ABI_PACKAGE/") }
                 .flatMap(AnalyzedMethod::runtimeReferences)
+                .filterNot(registeredRuntimeReferences::contains)
                 .toSet(),
             usedCallIds = summaries.values
                 .flatMapTo(linkedSetOf(), RuntimeCallFlow::callIds)
