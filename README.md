@@ -56,7 +56,14 @@ It installs with its own package ID (`com.key.board`) so you can use it alongsid
 ./build.sh
 ```
 
-3. The patched APK will be generated in `output/KeyOS.apk`
+3. The patched APK will be generated in `output/KeyOS.apk`.
+
+### Build from GitHub Actions
+
+Run **Actions > Build KeyOS APK > Run workflow** and provide an HTTPS URL for a
+compatible stock Gboard `arm64-v8a` APK. The workflow downloads that APK,
+patches it, and uploads an installable `KeyOS*.apk` artifact. Do not commit the
+stock APK to this repository.
 
 ---
 

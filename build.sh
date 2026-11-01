@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# PixelBoard - Build & Patch Automation Script
+# KeyOS - Build & Patch Automation Script
 # Maintainer: KeyOS (@KeyOSdev)
 # Repository: https://github.com/KeyOSdev/PixelBoard
 # ==============================================================================
@@ -23,7 +23,7 @@ for arg in "$@"; do
             echo "  -r, --rebuild    Recompile patch bundle from keyos-patches/ using Gradle"
             echo "  -h, --help       Show this help message"
             echo ""
-            echo "By default, ./build.sh runs 100% offline using the pre-bundled patches/PixelBoard.mpp."
+            echo "By default, ./build.sh runs 100% offline using the pre-bundled patches/KeyOS.mpp."
             exit 0
             ;;
         *)
@@ -35,7 +35,7 @@ for arg in "$@"; do
 done
 
 PATCH_VERSION=$(grep -E "^version\s*=" keyos-patches/gradle.properties | cut -d'=' -f2 | tr -d ' ')
-MPP_PATH="patches/PixelBoard.mpp"
+MPP_PATH="patches/KeyOS.mpp"
 
 if [[ "$REBUILD_PATCH" == true ]] || [[ ! -f "$MPP_PATH" ]]; then
     echo "=== 🎹 Compiling PixelBoard Patch Bundle from Source ==="
@@ -88,26 +88,26 @@ fi
 echo "☕ Using Java 21+: $JAVA_BIN"
 
 if [[ ! -f "$INPUT_APK" ]]; then
-    echo "⚠️ Note: Place stock Gboard APK at $INPUT_APK to generate output APK."
-    exit 0
+    echo "❌ Error: Place a stock Gboard APK at $INPUT_APK or pass its path as an argument."
+    exit 1
 fi
 
 echo "=== 🔨 Applying Patches to $INPUT_APK ==="
 mkdir -p output
 mkdir -p tools/patcher-data
 
-KEYSTORE_PATH="tools/patcher-data/pixelboard.keystore"
+KEYSTORE_PATH="tools/patcher-data/keyos.keystore"
 if [[ ! -f "$KEYSTORE_PATH" ]]; then
-    echo "🔑 Generating PixelBoard release keystore..."
+    echo "🔑 Generating KeyOS release keystore..."
     keytool -genkeypair \
         -keystore "$KEYSTORE_PATH" \
-        -alias pixelboard \
+        -alias keyos \
         -keyalg RSA \
         -keysize 2048 \
         -validity 10000 \
-        -storepass pixelboard \
-        -keypass pixelboard \
-        -dname "CN=PixelBoard, OU=PixelBoard, O=PixelBoard, L=Unknown, ST=Unknown, C=US" \
+        -storepass keyoskey \
+        -keypass keyoskey \
+        -dname "CN=KeyOS, OU=KeyOS, O=KeyOS, L=Unknown, ST=Unknown, C=US" \
         >/dev/null 2>&1
 fi
 
@@ -115,30 +115,35 @@ fi
     --patches="$MPP_PATH" \
     --options-file=options.json \
     --striplibs=arm64-v8a \
-    --signer="PixelBoard" \
+    --signer="KeyOS" \
     --keystore="$KEYSTORE_PATH" \
-    --keystore-password=pixelboard \
-    --keystore-entry-alias=pixelboard \
-    --keystore-entry-password=pixelboard \
+    --keystore-password=keyoskey \
+    --keystore-entry-alias=keyos \
+    --keystore-entry-password=keyoskey \
     --temporary-files-path="tools/patcher-data/tmp" \
-    -o=output/PixelBoard.apk \
+    -o=output/KeyOS.apk \
     -r=output/patching-result.json \
     "$INPUT_APK"
+
+if [[ ! -s "output/KeyOS.apk" ]]; then
+    echo "❌ Error: APK patching failed; no output/KeyOS.apk was produced." >&2
+    exit 1
+fi
 
 if [[ -f "output/patching-result.json" ]]; then
     GBOARD_VER=$(grep -o '"packageVersion":"[^"]*"' output/patching-result.json | cut -d'"' -f4 | cut -d'-' -f1)
     GBOARD_SHORT_VER=$(echo "$GBOARD_VER" | cut -d'.' -f1-3)
     if [[ -n "$GBOARD_VER" ]]; then
-        cp output/PixelBoard.apk "output/PixelBoard-${GBOARD_VER}.apk"
-        echo "📦 Versioned APK saved to: output/PixelBoard-${GBOARD_VER}.apk"
+        cp output/KeyOS.apk "output/KeyOS-${GBOARD_VER}.apk"
+        echo "📦 Versioned APK saved to: output/KeyOS-${GBOARD_VER}.apk"
     fi
     if [[ -n "$GBOARD_SHORT_VER" ]] && [[ "$GBOARD_SHORT_VER" != "$GBOARD_VER" ]]; then
-        cp output/PixelBoard.apk "output/PixelBoard-${GBOARD_SHORT_VER}.apk"
-        echo "📦 Short-versioned APK saved to: output/PixelBoard-${GBOARD_SHORT_VER}.apk"
+        cp output/KeyOS.apk "output/KeyOS-${GBOARD_SHORT_VER}.apk"
+        echo "📦 Short-versioned APK saved to: output/KeyOS-${GBOARD_SHORT_VER}.apk"
     fi
 fi
 if [[ -n "${PATCH_VERSION:-}" ]]; then
-    cp output/PixelBoard.apk "output/PixelBoard-${PATCH_VERSION}.apk"
+    cp output/KeyOS.apk "output/KeyOS-${PATCH_VERSION}.apk"
 fi
 
-echo "🎉 Successfully built output/PixelBoard.apk!"
+echo "🎉 Successfully built output/KeyOS.apk!"
