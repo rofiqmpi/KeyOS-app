@@ -455,19 +455,19 @@ class CompiledPatchRuntimeCallInventoryTest {
 
     private companion object {
         const val RUNTIME_CALL_ID_OWNER =
-            "com/key/board/keyos/patches/gboard/shared/runtimeabi/RuntimeCallId"
+            "com/key/board/patches/gboard/shared/runtimeabi/RuntimeCallId"
         const val RUNTIME_CALL_ID_DESCRIPTOR = "L$RUNTIME_CALL_ID_OWNER;"
         const val RUNTIME_CALL_EMITTER_OWNER =
-            "com/key/board/keyos/patches/gboard/shared/runtimeabi/RuntimeCallEmitter"
+            "com/key/board/patches/gboard/shared/runtimeabi/RuntimeCallEmitter"
         const val SOFT_KEY_FEATURE_OWNER =
-            "com/key/board/keyos/patches/gboard/shared/GboardSoftKeyFamilyFeature"
+            "com/key/board/patches/gboard/shared/GboardSoftKeyFamilyFeature"
         const val SOFT_KEY_COMPOSER_OWNER =
-            "com/key/board/keyos/patches/gboard/shared/GboardSoftKeyFamilyComposerKt"
+            "com/key/board/patches/gboard/shared/GboardSoftKeyFamilyComposerKt"
         const val SOFT_KEY_EMITTER_NAME = "emitSoftKeyRuntimeCall"
         const val GESTURE_COMPOSER_OWNER =
-            "com/key/board/keyos/patches/gboard/shared/GboardGestureFamilyComposerKt"
+            "com/key/board/patches/gboard/shared/GboardGestureFamilyComposerKt"
         const val GESTURE_STAGE_OWNER =
-            "com/key/board/keyos/patches/gboard/shared/GboardGestureFamilyStage"
+            "com/key/board/patches/gboard/shared/GboardGestureFamilyStage"
         const val GESTURE_EMITTER_NAME = "emitGestureRuntimeCall"
     }
 }
