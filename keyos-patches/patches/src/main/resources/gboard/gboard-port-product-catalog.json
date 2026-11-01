@@ -28,8 +28,8 @@
       ],
       "migration_scope": "version-sensitive",
       "consumer_files": [
-        "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/features/signaturebypass/GboardSignatureBypassBytecodePatch.kt",
-        "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/registry/GboardPatchRegistry.kt"
+        "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/features/signaturebypass/GboardSignatureBypassBytecodePatch.kt",
+        "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/registry/GboardPatchRegistry.kt"
       ],
       "contributions": [
         {
@@ -53,13 +53,13 @@
       ],
       "migration_scope": "version-sensitive",
       "consumer_files": [
-        "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/features/advancedvoice/GboardAdvancedVoice1803ZhTwPatch.kt",
-        "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/features/advancedvoice/GboardAdvancedVoiceFeatureMarkerPatch.kt",
-        "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/features/advancedvoice/GboardAdvancedVoiceFlagValuePatch.kt",
-        "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/features/advancedvoice/GboardAdvancedVoicePatchSupport.kt",
-        "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/features/rambler/GboardRambler1803OfficialSelectorPatch.kt",
-        "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/registry/GboardPatchRegistry.kt",
-        "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/shared/GboardFlagFamilyComposer.kt"
+        "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/features/advancedvoice/GboardAdvancedVoice1803ZhTwPatch.kt",
+        "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/features/advancedvoice/GboardAdvancedVoiceFeatureMarkerPatch.kt",
+        "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/features/advancedvoice/GboardAdvancedVoiceFlagValuePatch.kt",
+        "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/features/advancedvoice/GboardAdvancedVoicePatchSupport.kt",
+        "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/features/rambler/GboardRambler1803OfficialSelectorPatch.kt",
+        "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/registry/GboardPatchRegistry.kt",
+        "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/shared/GboardFlagFamilyComposer.kt"
       ],
       "contributions": [
         {
@@ -107,11 +107,11 @@
       ],
       "migration_scope": "version-sensitive",
       "consumer_files": [
-        "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/features/writingtools/GboardAiWritingToolsFeatureMarkerPatch.kt",
-        "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/features/writingtools/GboardAiWritingToolsFlagValuePatch.kt",
-        "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/features/writingtools/GboardAiWritingToolsPatchConstants.kt",
-        "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/registry/GboardPatchRegistry.kt",
-        "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/shared/GboardFlagFamilyComposer.kt"
+        "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/features/writingtools/GboardAiWritingToolsFeatureMarkerPatch.kt",
+        "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/features/writingtools/GboardAiWritingToolsFlagValuePatch.kt",
+        "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/features/writingtools/GboardAiWritingToolsPatchConstants.kt",
+        "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/registry/GboardPatchRegistry.kt",
+        "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/shared/GboardFlagFamilyComposer.kt"
       ],
       "contributions": [
         {
@@ -142,8 +142,8 @@
       "target_family_ids": [],
       "migration_scope": "generic",
       "consumer_files": [
-        "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/features/packagerename/GboardPackageRenameResourcePatch.kt",
-        "patches/src/main/kotlin/com/akshaykadam/pixelboard/patches/gboard/registry/GboardPatchRegistry.kt"
+        "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/features/packagerename/GboardPackageRenameResourcePatch.kt",
+        "patches/src/main/kotlin/com/key/board/keyos/patches/gboard/registry/GboardPatchRegistry.kt"
       ],
       "contributions": [
         {
