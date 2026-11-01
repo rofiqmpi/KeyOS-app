@@ -142,7 +142,7 @@ internal object CompiledPatchRuntimeCallInventory {
                             }
                             instruction is FieldInsnNode &&
                                 instruction.opcode == PUTSTATIC &&
-                                instruction.desc == RUNTIME_CALL_ID_DESCRIPTOR -> {
+                                instruction.desc.isRuntimeCallIdDescriptor() -> {
                                 pendingCall?.let { call ->
                                     put(FieldKey(instruction.owner, instruction.name, instruction.desc), call)
                                 }
@@ -356,14 +356,18 @@ internal object CompiledPatchRuntimeCallInventory {
     }
 
     private fun MethodInsnNode.isRuntimeCallEmitterInvocation(): Boolean =
-        owner == RUNTIME_CALL_EMITTER_OWNER &&
+        owner.endsWith("/RuntimeCallEmitter") &&
             name == "invoke" &&
-            desc.startsWith("($RUNTIME_CALL_ID_DESCRIPTOR")
+            desc.startsWith("(L") &&
+            desc.contains("/RuntimeCallId;")
 
     private fun FieldInsnNode.runtimeCallId(): RuntimeCallId? =
         takeIf { field ->
-            field.owner == RUNTIME_CALL_ID_OWNER && field.desc == RUNTIME_CALL_ID_DESCRIPTOR
+            field.owner.endsWith("/RuntimeCallId") && field.desc.isRuntimeCallIdDescriptor()
         }?.let { field -> callIdsByName[field.name] }
+
+    private fun String.isRuntimeCallIdDescriptor(): Boolean =
+        endsWith("/RuntimeCallId;")
 
     private fun AbstractInsnNode.isMetadataOrNop(): Boolean =
         this is LabelNode ||
