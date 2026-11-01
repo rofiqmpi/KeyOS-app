@@ -111,7 +111,7 @@ val generatePatchBuildInfo = tasks.register("generatePatchBuildInfo") {
     outputs.dir(outputDir)
 
     doLast {
-        val packageDir = outputDir.get().file("com/key/board/keyos/patches/shared").asFile
+        val packageDir = outputDir.get().file("com/key/board/patches/shared").asFile
         packageDir.mkdirs()
 
         packageDir.resolve("PatchBuildInfo.kt").writeText(
@@ -132,12 +132,12 @@ val generateGboardVersionBindings = tasks.register<GenerateTargetBindingsTask>(
 ) {
     val outputFile = generatedVersionBindingsDir.map { directory ->
         directory.file(
-            "com/key/board/keyos/patches/gboard/shared/generated/GboardVersionBindings.kt"
+            "com/key/board/patches/gboard/shared/generated/GboardVersionBindings.kt"
         )
     }
     val admissionOutputFile = generatedVersionBindingsDir.map { directory ->
         directory.file(
-            "com/key/board/keyos/patches/gboard/shared/generated/GboardTargetAdmission.kt"
+            "com/key/board/patches/gboard/shared/generated/GboardTargetAdmission.kt"
         )
     }
 
