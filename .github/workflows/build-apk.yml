@@ -11,9 +11,13 @@ on:
         description: Optional SHA-256 checksum for the downloaded APK
         required: false
         type: string
+      release_tag:
+        description: Git tag for the GitHub Release, for example v1.3.2
+        required: true
+        type: string
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build-apk:
@@ -53,10 +57,25 @@ jobs:
           chmod +x build.sh
           ./build.sh input/gboard.apk
 
+      - name: Validate generated APK
+        run: |
+          test -s output/KeyOS.apk
+          file output/KeyOS.apk
+          unzip -tq output/KeyOS.apk
+
       - name: Upload installable APK
         uses: actions/upload-artifact@v4
         with:
           name: keyos-apk
-          path: output/KeyOS*.apk
+          path: output/KeyOS.apk
           if-no-files-found: error
           retention-days: 14
+
+      - name: Publish APK to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.release_tag }}
+          name: KeyOS ${{ inputs.release_tag }}
+          generate_release_notes: true
+          make_latest: true
+          files: output/KeyOS.apk
